@@ -1,0 +1,98 @@
+/* Variables Propias*/
+
+:root {
+    --first-color: rgb(17, 122, 247);
+    --first-color-alpha: rgb(17, 122, 247, 0.75);
+    --second-color: rgb(0, 0, 0);
+    --second-color-alpha: rgba(69, 70, 78, 0.75);
+}
+
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    display:grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    background-color: var(--first-color) !important;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+nav {
+    grid-area:header;
+}
+footer {
+    grid-area: footer;
+
+}
+/* Variables Boostrap*/
+
+.navbar-brand img {
+    width: auto;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.card{
+    width: 18rem;
+    margin:5px;
+}
+.bg-primary {
+    background-color: var(--second-color) !important;
+}
+
+.nav-item:hover {
+    background-color: var(--first-color-alpha);
+}
+
+article{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+
